@@ -1,4 +1,4 @@
-function fibs(n) {
+export function fibs(n) {
 //declaring our array to 0 and 1 where we start
 //in fibonacci sequence using loop iteration
 let arr = [0, 1];
