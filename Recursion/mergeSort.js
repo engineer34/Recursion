@@ -1,5 +1,5 @@
-//start with function mergeSort
-function mergeSort(arr){
+//start with function mergeSort I exorted for my so it can be seein in my html for live reo link
+export function mergeSort(arr){
     //if statement if our array is less than or equal
     //to one return our array
     if(arr.length <= 1){
