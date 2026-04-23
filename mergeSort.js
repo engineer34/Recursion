@@ -15,14 +15,16 @@ export function mergeSort(arr){
 //where we actually merge
 function merge(left, right){
     let result = [];
-    while (left.length && right.length){
-        if (left[0] < right[0]){
-            result.push(left.shift());
+    while (i < left.length && j < right.length){
+        if (left[i] < right[j]){
+            result.push(left[i]);
+            i++;
         } else {
-            result.push(right.shift());
+            result.push(right[j]);
+            j++;
         }
     }
-    return result.concat(left, right);
+    return result.concat(left.slice(i));
 }
 //print in console
-console.log(mergeSort([3,2,1,13
+
