@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recursion Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h1 { margin-bottom: 10px; }
+    pre {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+<h1>Recursion Project Output</h1>
+  <p>This page shows the output of your fibs, fibsRecursive, and mergeSort functions.</p>
+
+  <h2>Fibonacci (Iterative)</h2>
+  <pre id="fibsOutput"></pre>
+
+  <h2>Fibonacci (Recursive)</h2>
+  <pre id="fibsRecOutput"></pre>
+<h2>Merge Sort</h2>
+  <pre id="mergeOutput"></pre>
+
+  <script type="module">
+    import { fibs, fibsRecursive } 
+      from "./fibs.js";
+    import { mergeSort } 
+      from "./mergeSort.js";
+
+    document.getElementById("fibsOutput").textContent =
+      JSON.stringify(fibs(8));
+
+    document.getElementById("fibsRecOutput").textContent =
+      JSON.stringify(fibsRecursive(8));
+
+    const arr= [5, 3, 8, 4, 2, 7];
+    document.getElementById("mergeOutput").textContent =
+      JSON.stringify(mergeSort(arr));
+  </script>
+
+</body>
+</html>
